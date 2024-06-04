@@ -6,18 +6,18 @@ import argparse
 from inflammation import models, views
 
 
-def main(args):
+def main(arguments):
     """The MVC Controller of the patient inflammation data system.
 
     The Controller is responsible for:
     - selecting the necessary models and views for the current task
     - passing data between models and views
     """
-    inFiles = args.infiles
-    if not isinstance(inFiles, list):
-        inFiles = [args.infiles]
+    infiles = arguments.infiles
+    if not isinstance(infiles, list):
+        infiles = [arguments.infiles]
 
-    for filename in inFiles:
+    for filename in infiles:
         print(filename)
         inflammation_data = models.load_csv(filename)
 
