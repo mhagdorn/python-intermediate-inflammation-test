@@ -10,6 +10,7 @@ jobs:
 
     # define matrix of systems/versions to test on
     strategy:
+        fail-fast: false
         matrix:
             os: ["ubuntu-latest", "maxos-latest", "windows-latest"]
             python-version: ["3.10", "3.11"]
